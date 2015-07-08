@@ -1,3 +1,9 @@
+PATH
+  remote: lita-omikujijp
+  specs:
+    lita-omikujijp (0.1.0)
+      lita (>= 4.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +57,7 @@ PLATFORMS
 
 DEPENDENCIES
   lita
+  lita-omikujijp!
   lita-slack
 
 BUNDLED WITH

@@ -7,8 +7,8 @@ module Lita
       }
       def draw(response)
         from, to, count = *response.matches[0][0..2].map{|v| v.tr('０-９', '0-9').to_i }
-        smaple = (from..to).to_a.sample(count)
-        response.reply "ヒキヨッタバイ: %s" % sample.join(", ")
+        sample = (from..to).to_a.sample(count)
+        response.reply "ヒキヨッタバイ: %s" % sample.sort.join(", ")
       rescue => e
         response.reply "シッパイデスタイ: %s: %s" % [e.class, e.message]
       end
