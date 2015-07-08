@@ -30,6 +30,11 @@ Lita.configure do |config|
     config.adapters.slack.token = ENV["SLACK_API_KEY"]
   end
 
+  if ENV["REDIS_URL"]
+    config.redis[:url] = ENV["REDIS_URL"]
+    config.http.port = ENV["PORT"]
+  end
+
   ## Example: Set options for the Redis connection.
   # config.redis.host = "127.0.0.1"
   # config.redis.port = 1234
